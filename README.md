@@ -1,17 +1,12 @@
-[![Build Status](https://travis-ci.org/wjlei1990/pycmt3d.svg?branch=master)](https://travis-ci.org/wjlei1990/pycmt3d/branches)
-[![DOI](https://zenodo.org/badge/22621/wjlei1990/pycmt3d.svg)](https://zenodo.org/badge/latestdoi/22621/wjlei1990/pycmt3d)
 
+# exploration-scale pycmt3d modified from pycmt3d of Wenjie Lei at https://github.com/wjlei1990/pycmt3d
 
-# pycmt3d
-
-This is the python version of [cmt3d](https://github.com/QuLogic/GRD_CMT3D) package(credited to Qinya Liu and Carl Tape), which is used in the CMT source inversion.
-
-* the doc is a bit out-dated. Please refer to the test code for usage:
+Please refer to the test code for general usage:
 https://github.com/wjlei1990/pycmt3d/blob/master/src/pycmt3d/tests/test_cmt3d.py
 
 ### Install
 ```
-git clone https://github.com/wjlei1990/pycmt3d
+git clone ...
 cd pycmt3d
 pip install -v -e .
 ```
