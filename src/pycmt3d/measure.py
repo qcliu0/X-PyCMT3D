@@ -32,8 +32,11 @@ def _xcorr_win_(arr1, arr2, Tapering=True):
     A1 = arr1.copy()
     A2 = arr2.copy()
 
+    from scipy import signal
+
     if Tapering:
-        Taper = hann(len(arr1))
+        #Taper = hann(len(arr1))
+        Taper = signal.tukey(len(A1), alpha=0.2)
         A1 *= Taper
         A2 *= Taper
 
@@ -100,7 +103,7 @@ def _diff_energy_(arr1, arr2, taper=None):
         return np.sum((taper * (arr1 - arr2)) ** 2)
 
 
-def correct_window_index(arr1, arr2, istart, iend):
+def correct_window_index_bak(arr1, arr2, istart, iend):
     """
     Correct the window index based on cross-correlation shift
     """
@@ -120,6 +123,32 @@ def correct_window_index(arr1, arr2, istart, iend):
                          "[%d, %d] and [%d, %d]" % (istart_d, iend_d,
                                                     istart_s, iend_s))
     return istart_d, iend_d, istart_s, iend_s, max_cc, nshift
+
+def correct_window_index(arr1, arr2, istart, iend):
+    """
+    Correct the window index based on cross-correlation shift
+    """
+    npts = min(len(arr1), len(arr2))
+    if istart < 0:
+        iend = iend - istart
+        istart = 0
+    win_len = iend - istart
+    print("istart, iend, win_len", istart, iend, win_len)
+    max_cc, nshift = _xcorr_win_(arr1[istart:iend], arr2[istart:iend], Tapering=True)
+    istart_d = max(1, istart + nshift)
+    iend_d = min(npts, iend + nshift)
+    if istart + nshift < 1:
+        iend_d = istart_d + win_len
+    if iend + nshift > npts:
+        istart_d = iend_d - win_len  
+    istart_s = max(0, istart_d - nshift)
+    iend_s = min(npts, iend_d - nshift)
+    if (iend_d - istart_d) != (iend_s - istart_s):
+        raise ValueError("After correction, window length not the same: "
+                         "[%d, %d] and [%d, %d]" % (istart_d, iend_d,
+                                                    istart_s, iend_s))
+    return istart_d, iend_d, istart_s, iend_s, max_cc, nshift
+
 
 
 def measure_window(obsd_array, synt_array, istart, iend,
