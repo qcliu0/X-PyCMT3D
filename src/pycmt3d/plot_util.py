@@ -551,7 +551,7 @@ class PlotInvSummary(object):
         #print(w)
 
         plt.scatter(x, y, s=30, c='red', cmap='afmhot', marker="^", edgecolor="k",
-                  linewidth='0.3', zorder=3)
+                  linewidth=0.3, zorder=3)
 
         cmt_lat = self.cmtsource.latitude
         cmt_lon = self.cmtsource.longitude
@@ -667,7 +667,7 @@ class PlotInvSummary(object):
         plt.title("Station Dist and Azi", fontsize=10)
         ax = plt.gca()
         c = plt.scatter(self.sta_theta, self.sta_dist, marker=u'^', c='r',
-                        s=20, edgecolor='k', linewidth='0.3')
+                        s=20, edgecolor='k', linewidth=0.3)
         c.set_alpha(0.75)
         plt.xticks(fontsize=8)
         plt.yticks(fontsize=6)
