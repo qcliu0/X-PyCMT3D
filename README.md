@@ -6,7 +6,7 @@ at https://github.com/wjlei1990/pycmt3d
 
 ### Install
 ```
-git clone ...
+git clone https://github.com/qianchengliu0/X-PyCMT3D.git
 cd pycmt3d
 pip install -v -e .
 ```
