@@ -1,5 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Importing setuptools monkeypatches some of distutils commands so things like
+# 'python setup.py develop' work. Wrap in try/except so it is not an actual
+# dependency. Inplace installation with pip works also without importing
+# setuptools.
+
+import os
+import glob
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup
+from setuptools import find_packages
 from setuptools.command.test import test as TestCommand
 
 
@@ -16,41 +27,52 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 
+# Utility function to read the README file.
+# Used for the long_description.  It's nice, because now 1) we have a top level
+# README file and 2) it's easier to type in the README file than to put a raw
+# string in below ...
+def read(fname):
+    try:
+        return open(os.path.join(os.path.dirname(__file__), fname)).read()
+    except Exception as e:
+        return "Can't open %s" % fname
+
+
+long_description = """
+Source code: https://github.com/wjlei1990/pycmt3d
+Documentation: http://wjlei1990.github.io/pycmt3d/
+
+%s""".strip() % read("README.md")
+
 setup(
-    name="spaceweight",
-    version="0.0.1",
-    license='GNU Lesser General Public License, version 3 (LGPLv3)',
-    description="Python tools for geographical spatial weighting",
-    author="Wenjie Lei",
-    author_email="lei@princeton.edu",
-    url="https://github.com/wjlei1990/spaceweight",
+    name='pycmt3d',
+    version='0.1.12',
+    license='GNU Lesser General Public License, Version 3',
+    description='a python port of cmt3d softward',
+    long_description=long_description,
     packages=find_packages("src"),
     package_dir={"": "src"},
     tests_require=['pytest'],
     cmdclass={'test': PyTest},
+    include_package_data=True,
     zip_safe=False,
     classifiers=[
-        # complete classifier list:
-        # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        "Development Status :: 4 - Beta",
-        "Intended Audience :: Developers",
-        "Intended Audience :: Science/Research",
-        "Operating System :: Unix",
-        "Operating System :: POSIX",
-        "Operating System :: Microsoft :: Windows",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: Implementation :: CPython",
-        "Topic :: Scientific/Engineering",
-        "Topic :: Scientific/Engineering :: Physics",
-        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: Developers',
+        'Operating System :: Unix',
+        'Operating System :: POSIX',
+        'Topic :: Scientific/Engineering',
+        'Topic :: Scientific/Engineering :: Physics',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
     ],
-    keywords=[
-        "geographic", "space", "weighting strategy"
-    ],
+    keywords=['seismology', 'cmt3d', 'moment tensor',
+              'centroid moment inversion'],
     install_requires=[
-        "numpy", "obspy>=1.0.0", "flake8>=3.0", "pytest", "nose",
-        "future>=0.14.1", "scipy", "matplotlib"
+        "obspy>=1.0.0", "numpy", "future>=0.14.1", "flake8", "geographiclib",
+        "scipy", "spaceweight"
     ],
     extras_require={
         "docs": ["sphinx"]

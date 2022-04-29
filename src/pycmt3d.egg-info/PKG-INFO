@@ -2,9 +2,6 @@ Metadata-Version: 2.1
 Name: pycmt3d
 Version: 0.1.12
 Summary: a python port of cmt3d softward
-Home-page: https://github.com/wjlei1990/pycmt3d
-Author: Wenjie Lei, Xin Song
-Author-email: lei@Princeton.EDU, songxin@physics.utoronto.ca
 License: GNU Lesser General Public License, Version 3
 Keywords: seismology,cmt3d,moment tensor,centroid moment inversion
 Platform: UNKNOWN
