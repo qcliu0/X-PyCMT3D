@@ -1,7 +1,9 @@
 
 # X-PyCMT3D
 
-A modified version of PyCMT3D (credited to Wenjie and Lucas). Designed for the CMT source inversion for small earthquakes at the reservoir scale.
+A modified version of PyCMT3D (credited to Wenjie and Lucas). 
+
+Designed for the CMT source inversion of small earthquakes at the reservoir scale.
 
 ### Install
 ```
