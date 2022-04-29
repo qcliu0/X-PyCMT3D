@@ -27,8 +27,8 @@ def _xcorr_win_(arr1, arr2, Tapering=True):
     from scipy import signal
 
     if Tapering:
-        #Taper = hann(len(arr1))
-        Taper = signal.tukey(len(A1), alpha=0.2)
+        Taper = hann(len(arr1))
+        #Taper = signal.tukey(len(A1), alpha=0.2)
         A1 *= Taper
         A2 *= Taper
 
