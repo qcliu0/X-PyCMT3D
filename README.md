@@ -1,8 +1,7 @@
 
 # X-PyCMT3D
 
-This is a modified python version of [cmt3d] (https://github.com/QuLogic/GRD_CMT3D) package(credited to Qinya Liu and Carl Tape, later modified by Wenjie Lei into PyCMT3D), which is used in the CMT source inversion for small earthquakes at the reservoir scale.
-
+A modified version of PyCMT3D (credited to Wenjie and Lucas). Designed for the CMT source inversion for small earthquakes at the reservoir scale.
 
 ### Install
 ```
