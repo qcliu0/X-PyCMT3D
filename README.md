@@ -12,3 +12,5 @@ gh repo clone qcliu0/spaceweight
 pip install -v -e spaceweight/
 pip install -v -e .
 ```
+
+For more details on real-world applications, please see https://doi.org/10.1093/gji/ggac137.
