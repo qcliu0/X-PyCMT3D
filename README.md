@@ -8,5 +8,7 @@ This is a modified python version of [cmt3d] (https://github.com/QuLogic/GRD_CMT
 ```
 gh repo clone qcliu0/X-PyCMT3D
 cd X-PyCMT3D
+gh repo clone qcliu0/spaceweight
+pip install -v -e spaceweight/
 pip install -v -e .
 ```
