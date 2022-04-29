@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Pycmt3d test suite.
 
-Run with pytest.
-
-:copyright:
-    Wenjie Lei (lei@princeton.edu)
-:license:
-    GNU General Public License, Version 3
-    (http://www.gnu.org/copyleft/gpl.html)
-"""
 from __future__ import print_function, division
 import inspect
 import os

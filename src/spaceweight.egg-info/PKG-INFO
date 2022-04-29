@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: spaceweight
+Version: 0.0.1
+Summary: Python tools for geographical spatial weighting
+Home-page: https://github.com/wjlei1990/spaceweight
+Author: Wenjie Lei
+Author-email: lei@princeton.edu
+License: GNU Lesser General Public License, version 3 (LGPLv3)
+Keywords: geographic,space,weighting strategy
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Provides-Extra: docs
+License-File: LICENSE
+
+UNKNOWN
+

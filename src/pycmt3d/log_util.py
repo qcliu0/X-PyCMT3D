@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-log util
-
-:copyright:
-    Wenjie Lei (lei@princeton.edu), 2016
-:license:
-    GNU Lesser General Public License, version 3 (LGPLv3)
-    (http://www.gnu.org/licenses/lgpl-3.0.en.html)
-"""
 
 from __future__ import (print_function, division, absolute_import)
 import numpy as np

@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Source and Receiver classes of Instaseis.
 
-:copyright:
-    Lion Krischer (krischer@geophysik.uni-muenchen.de), 2014
-    Martin van Driel (Martin@vanDriel.de), 2014
-    Wenjie Lei (lei@princeton.edu), 2016
-:license:
-    GNU Lesser General Public License, Version 3
-    (http://www.gnu.org/copyleft/lgpl.html)
-"""
 from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
 import numpy as np

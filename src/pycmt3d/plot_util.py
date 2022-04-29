@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Plot utils
 
-:copyright:
-    Wenjie Lei (lei@princeton.edu), 2016
-    & Qiancheng Liu (ql5@princeton.edu), 2020
-:license:
-    GNU Lesser General Public License, version 3 (LGPLv3)
-    (http://www.gnu.org/licenses/lgpl-3.0.en.html)
-"""
 from __future__ import print_function, division, absolute_import
 import os
 from collections import defaultdict

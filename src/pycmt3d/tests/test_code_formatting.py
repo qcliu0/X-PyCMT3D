@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-Tests all Python files of the project with flake8. This ensure PEP8 conformance
-and some other sanity checks as well.
 
-:copyright:
-    Lion Krischer (krischer@geophysik.uni-muenchen.de), 2013-2014
-:license:
-    GNU General Public License, Version 3
-    (http://www.gnu.org/copyleft/gpl.html)
-"""
 from flake8.api import legacy as flake8
 import inspect
 import os
